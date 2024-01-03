@@ -1,9 +1,12 @@
 import { Telegraf, Markup } from "telegraf";
+import express from "express";
 import puppeteer from "puppeteer";
 import checkAdd from "./Helper/checkAdd.js";
 import imageReply from "./Helper/imageReply.js";
-const browser = await puppeteer.launch({headless : true});
+const browser = await puppeteer.launch();
 const bot = new Telegraf("6793068435:AAHkURhKnnOMDxfM48jghNrE-u9kZhtHIqk");
+const app = express();
+const port = process.env.PORT || 3001;
 const menuBtn = (ctx) => {
   const button = Markup.button.callback("Check 🔍", "check");
   ctx.replyWithMarkdownV2(
@@ -47,3 +50,7 @@ bot.on("message", async (ctx) => {
 });
 
 bot.launch();
+app.get('/', function (req, res) {
+  res.send("Welocme to check your token");
+  });
+  const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
