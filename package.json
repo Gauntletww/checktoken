@@ -6,12 +6,12 @@
     "@solana/buffer-layout": "^4.0.1",
     "@solana/buffer-layout-utils": "^0.2.0",
     "@solana/web3.js": "^1.87.6",
-    "axios": "^1.6.3",
+    "axios": "^0.24.0", // Corrected version
     "capture-website": "^4.0.0",
-    "puppeteer": "^21.6.1",
+    "puppeteer": "^21.3.0", // Updated version
     "telegraf": "^4.15.3"
   },
   "scripts": {
-    "postinstall": "node node_modules/puppeteer/install.js",
-  },
+    "postinstall": "node node_modules/puppeteer/install.js"
+  }
 }
