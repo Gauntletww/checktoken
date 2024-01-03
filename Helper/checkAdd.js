@@ -1,6 +1,6 @@
 import web3 from "@solana/web3.js";
 
-const connection = new web3.Connection(web3.clusterApiUrl('mainnet-beta'));
+const connection = new web3.Connection("https://go.getblock.io/b10d6168df744bd9b8f1e0f9acf18644");
 
 const checkAdd = (address) => {
     let publicKey;
