@@ -2,7 +2,7 @@ import { Telegraf, Markup } from "telegraf";
 import puppeteer from "puppeteer";
 import checkAdd from "./Helper/checkAdd.js";
 import imageReply from "./Helper/imageReply.js";
-const browser = await puppeteer.launch();
+const browser = await puppeteer.launch({headless : true});
 const bot = new Telegraf("6793068435:AAHkURhKnnOMDxfM48jghNrE-u9kZhtHIqk");
 const menuBtn = (ctx) => {
   const button = Markup.button.callback("Check 🔍", "check");
